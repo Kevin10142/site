@@ -1,0 +1,8 @@
+<div class="mainWrapper">
+	<% mains.forEach(function(main, index){ %>
+		<div class="<%= index===0 ? 'mainWrapper__content mainWrapper__content--active' : 'mainWrapper__content' %>">
+			<h1><%= main.title %></h1>
+			<p><%= main.content %></p>
+		</div>
+	<% }) %>
+</div>

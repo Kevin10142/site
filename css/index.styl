@@ -1,0 +1,23 @@
+@require 'constants'
+
+body
+	background-color: $bodyBackgroundColor
+	min-height: 100vh
+
+header
+	background-color: $headerBackgroundColor
+	height: $mobileHeaderRegionHeight
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 10
+	@media screen and (min-width: $mobileBreakPoint)
+		height: $desktopHeaderRegionHeight
+
+main
+	min-height: "calc(100vh - %s)" % $footerHeight
+
+footer
+	background-color: $footerBackgroundColor
+	height: $footerHeight

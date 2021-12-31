@@ -1,0 +1,45 @@
+@require 'constants'
+
+$tabPadding = 20px
+$tabSpace = 20px
+$tabColor = #189AB4
+$activeTabColor = #05445E
+
+.tabs
+	box-sizing: border-box
+	height: $tabsHeight
+	padding: 8px $mobilePaddingX
+	@media screen and (min-width: $mobileBreakPoint)
+		margin: auto
+		max-width:	1440px
+		padding-left: $desktopPaddingX
+		padding-right: $desktopPaddingX
+
+	.tabs__list
+		align-items: center
+		display: flex
+		height: 100%
+
+		.list__item
+			align-items: center
+			border-radius: $commonBorderRadius
+			box-sizing: border-box
+			color: $tabColor
+			cursor: pointer
+			display: flex
+			flex: none
+			font-size: 18px
+			font-weight: bold
+			height: 100%
+			justify-content: center
+			margin-right: $tabSpace
+			padding: $tabPadding
+		.list__item:hover
+			background-color: $activeTabColor
+			color: #FFFFFF
+		:last-child
+			margin-right: 0
+
+		.list__item--active
+			background-color: $activeTabColor
+			color: #FFFFFF

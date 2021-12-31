@@ -1,0 +1,15 @@
+<nav class="tabs">
+	<ul class="tabs__list">
+		<% tabs.forEach(function(tab, index){ %>
+			<% if (index === 0) { %>
+				<li class="list__item list__item--active">
+					<div><%= tab.name %></div>
+				</li>
+			<% } else { %>
+				<li class="list__item">
+					<div><%= tab.name %></div>
+				</li>
+			<% } %>
+		<% }) %>
+	</ul>
+</nav>

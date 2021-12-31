@@ -1,0 +1,11 @@
+@require 'constants'
+
+.mainWrapper
+	overflow: auto
+	padding: $mobileHeaderRegionHeight $desktopPaddingX
+	@media screen and (min-width: $mobileBreakPoint)
+		padding-top: $desktopHeaderRegionHeight
+	.mainWrapper__content
+		display: none
+	.mainWrapper__content--active
+		display: block

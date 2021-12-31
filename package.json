@@ -1,0 +1,49 @@
+{
+	"name": "site",
+	"version": "1.0.0",
+	"description": "simple node site",
+	"main": "server.js",
+	"scripts": {
+		"preinstall": "([ ! -f package-lock.json ] && npm install --package-lock-only --ignore-scripts --no-audit); npx npm-force-resolutions",
+		"build": "node_modules/.bin/gulp",
+		"dev": "nodemon server.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Kevin10142/site.git"
+	},
+	"keywords": [
+		"node"
+	],
+	"author": "",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Kevin10142/site/issues"
+	},
+	"homepage": "https://github.com/Kevin10142/site#readme",
+	"dependencies": {
+		"@babel/core": "^7.16.7",
+		"@babel/plugin-transform-runtime": "^7.16.7",
+		"@babel/preset-env": "^7.16.7",
+		"@babel/runtime-corejs3": "^7.16.7",
+		"babelify": "^10.0.0",
+		"browserify": "^17.0.0",
+		"ejs": "^3.1.6",
+		"event-stream": "^4.0.1",
+		"express": "^4.17.2",
+		"glob": "^7.2.0",
+		"gulp": "^4.0.2",
+		"gulp-babel": "^8.0.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-stylus": "^2.7.1",
+		"gulp-uglify": "^3.0.2",
+		"nodemon": "^2.0.15",
+		"vinyl-buffer": "^1.0.1",
+		"vinyl-source-stream": "^2.0.0"
+	},
+	"resolutions": {
+		"glob-parent": "^6.0.2"
+	}
+}

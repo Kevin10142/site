@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<%- include('../partials/head'); %>
+</head>
+
+<body>
+	<header>
+		<%- include('../partials/header'); %>
+		<%- include('../partials/tabs', {
+			tabs: [{
+				name: "Tab1"
+			},{
+				name: "Tab2"
+			},{
+				name: "Tab3"
+			}]
+		}); %>
+	</header>
+	<main>
+		<%- include('../partials/main', {
+			mains: [{
+				title: "Tab1 title",
+				content: "Tab1 content"
+			},{
+				title: "Tab2 title",
+				content: "Tab2 content"
+			},{
+				title: "Tab3 title",
+				content: "Tab3 content"
+			}]
+		}); %>
+	</main>
+	<footer>
+		<%- include('../partials/footer'); %>
+	</footer>
+	<%- include('../partials/lightbox'); %>
+</body>
+
+</html>

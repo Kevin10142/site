@@ -1,0 +1,37 @@
+@require 'constants'
+
+$buttonWidth = 30px
+$buttonHeight = 30px
+$pointDiameter = 5px
+$pointSpace = 3px
+
+.headerWrapper
+	align-items: center
+	box-sizing: border-box
+	display: flex
+	height: $mobileHeaderHeight
+	justify-content: space-between
+	padding: 8px $mobilePaddingX
+	@media screen and (min-width: $mobileBreakPoint)
+		height: $desktopHeaderHeight
+		margin: auto
+		max-width: 1440px
+		padding-left: $desktopPaddingX
+		padding-right: $desktopPaddingX
+
+	.buttonWrapper
+		align-items: center
+		cursor: pointer
+		display: flex
+		justify-content: space-between
+		height: $buttonHeight
+		width: $buttonWidth
+
+		.buttonWrapper__point
+			background-color: #000000
+			border-radius: 50%
+			height: $pointDiameter
+			width: $pointDiameter
+			margin-right: $pointSpace
+		.buttonWrapper__point:last-child
+			margin-right: 0
