@@ -91,9 +91,12 @@ const watchChange = () => {
 	gulp.watch('./js/*.js', gulp.series(buildJs, concatJs))
 }
 
+const build = gulp.parallel(buildCss, gulp.series(buildJs, concatJs))
+
 const buildAndWatch = gulp.series(
-	gulp.parallel(buildCss, gulp.series(buildJs, concatJs)),
+	build,
 	watchChange
 )
 
-gulp.task('default', buildAndWatch)
+gulp.task('default', build)
+gulp.task('watch', buildAndWatch)

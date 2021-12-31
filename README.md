@@ -3,14 +3,20 @@ simple node site
 
 ## execute
 
-`npm run build`: build css, js
+### run dev:
+`npm install`
+
+`npm run build:watch`: build css, js
 
 `npm run dev`: run node server
 
-### HTML template
+### docker:
+`docker-compose up`: need to re-build css, js after changed
+
+## HTML template
 [ejs](https://ejs.co/)
 
-### directory
+## directory
 
 ejs files under: `views/`
 
